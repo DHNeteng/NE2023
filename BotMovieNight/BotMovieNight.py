@@ -16,8 +16,8 @@ from datetime import datetime
 lock = False
 
 load_dotenv()
-
-score_emote = [":tomato:", "<:imdb:1326272649504100454>", "<:metacritic:1326272970137534566>"]
+# Create your own IMDB and metacritic emojis here in your discord, and update this
+score_emote = [":tomato:", "<:imdb:EMOJI-ID>", "<:metacritic:EMOJI-ID>"]
 genre_customs = {
     "Action": ":bomb:",
     "Adventure": ":kite:",
@@ -312,6 +312,7 @@ def get_first_youtube_result(search_query):
 async def shutdown(ctx, *extra):
     extra = str(extra)
     title_search = extra.replace(" ", "_")
+    #This is where you need to populate your omdbapi key
     live_out = urllib.request.urlopen(f"http://www.omdbapi.com/?apikey=YOUR-API-KEY-HERE&t={title_search}&plot=full").read()
     json_out = json.loads(live_out)
     reaction = "✅"
