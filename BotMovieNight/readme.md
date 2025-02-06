@@ -27,4 +27,22 @@ I'm making an assumption that if you're retrieving and using this bot, you have 
 * IMDB/MetaCritic Emojis [BotMovieNight.py#L20] - Emojis needed to actually show IMDB and MetaCritic emojis, else you'll fail to retrieve the emoji ID's. You can also just change this to an emoji you prefer
 
 **Hey, wtf does char_length actually do?**
+
 The discord font's weird. It's got awkward spacing, and I couldn't render these in python to measure pixel-width of each character (thanks Discord for making it impossible to download the font :P). So I went through every character and determined how many "spaces" wide each character is. As PrettyTable or some other formatting mechanism would very quickly exceeed the 2000 character limit of an individual discord message, alignment by manually adding spaces was the only viable means of ensuring a "pretty" vote window would be provided.
+
+**Questions, Concerns, Etc.?**
+
+Fork requests, I guess.  Not trying to be public here, not supporting this project outside of this initial push requests. I may create a "scrubbing" tool to remove any personally-identifying stuff within my code to keep current versions public, but for now - /salute, good luck!
+
+Last updated Feb6 2025.
+Planned private features:
+* Countdown for tracking movie releases
+* Streaming platform identification/retrieval
+* Stack-ranked genres to concatenate output
+  * Custom emojis per-genre (Dependent on above, char limits)
+* Cleanup of shared functions between good/bad
+* Seen movie de-duplication (saw it, don't add it, maybe show the rating)
+  * Find a random movie not within the good/bad/seen lists
+
+If user demand exists, I'll keep pushing :) Thank you!
+- Dan
